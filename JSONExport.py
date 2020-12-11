@@ -9,12 +9,12 @@ import json
 def JSONInputPoem():
     dbreader = DBReader({
         'dbtype': 'sqlite',
-        'path': '/Users/veram/PycharmProjects/Factures/MeterRhyme/database/accents_new.db'})
+        'path': '/Factures/MeterRhyme/database/accents_new.db'})
     dbreader.connect()
     acc = Accentuation(dbreader)
     meter = MeterAnalyzer1()
     rhyme = RhymeAnalyser()
-    listOfStih = readText("/Users/veram/PycharmProjects/Factures/MeterRhyme/inputPoem.txt")
+    listOfStih = readText("/Factures/MeterRhyme/inputPoem.txt")
 
     n = 0
     for Stih in listOfStih:
@@ -47,12 +47,12 @@ def JSONInputPoem():
 def JSONPushkin():
     dbreader = DBReader({
         'dbtype': 'sqlite',
-        'path': '/Users/veram/PycharmProjects/Factures/MeterRhyme/database/accents_new.db'})
+        'path': '/Factures/MeterRhyme/database/accents_new.db'})
     dbreader.connect()
     acc = Accentuation(dbreader)
     meter = MeterAnalyzer1()
     rhyme = RhymeAnalyser()
-    listOfStih = readText("/Users/veram/PycharmProjects/Factures/MeterRhyme/pushkinCorpus.txt")
+    listOfStih = readText("/Factures/MeterRhyme/pushkinCorpus.txt")
 
     n = 0
     for Stih in listOfStih:
@@ -86,12 +86,12 @@ def JSONPushkin():
 def JSONTolstoy():
     dbreader = DBReader({
         'dbtype': 'sqlite',
-        'path': '/Users/veram/PycharmProjects/MeterRhyme/database/accents_new.db'})
+        'path': '/MeterRhyme/database/accents_new.db'})
     dbreader.connect()
     acc = Accentuation(dbreader)
     meter = MeterAnalyzer1()
     rhyme = RhymeAnalyser()
-    listOfStih = readText("/Users/veram/PycharmProjects/Factures/MeterRhyme/Tolstoy1.txt")
+    listOfStih = readText("/Factures/MeterRhyme/Tolstoy1.txt")
     n = 0
     for Stih in listOfStih:
         poemstihdata = acc.analyze2(Stih)
