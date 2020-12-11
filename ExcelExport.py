@@ -9,12 +9,12 @@ import openpyxl as opxl
 def ExcelPushkin():
     dbreader = DBReader({
         'dbtype': 'sqlite',
-        'path': '/Users/veram/PycharmProjects/MeterRhyme/database/accents_new.db'})
+        'path': '/MeterRhyme/database/accents_new.db'})
     dbreader.connect()
     acc = Accentuation(dbreader)
     meter = MeterAnalyzer1()
     rhyme = RhymeAnalyser()
-    listOfStih = readText("/Users/veram/PycharmProjects/Factures/MeterRhyme/pushkinCorpus.txt")
+    listOfStih = readText("/Factures/MeterRhyme/pushkinCorpus.txt")
     table = opxl.load_workbook('results.xlsx')
     sheet = table.active
     n = 0
@@ -60,12 +60,12 @@ def ExcelPushkin():
 def ExcelTolstoy():
     dbreader = DBReader({
         'dbtype': 'sqlite',
-        'path': '/Users/veram/PycharmProjects/MeterRhyme/database/accents_new.db'})
+        'path': '/MeterRhyme/database/accents_new.db'})
     dbreader.connect()
     acc = Accentuation(dbreader)
     meter = MeterAnalyzer1()
     rhyme = RhymeAnalyser()
-    listOfStih = readText("/Users/veram/PycharmProjects/Factures/MeterRhyme/Tolstoy1.txt")
+    listOfStih = readText("/Factures/MeterRhyme/Tolstoy1.txt")
     table = opxl.load_workbook('resultsTolstoy.xlsx')
     sheet = table.active
     n = 0
